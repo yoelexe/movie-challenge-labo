@@ -1,4 +1,4 @@
-import { Movies } from "./movies/Movies";
+import { Trending } from "./trending/Trending";
 import { Layout } from "./layouts/Layout";
 import { Carousel } from "./carousel/Carousel"
 
@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <Layout>
       <Carousel />
-      <Movies />
+      <Trending />
     </Layout>
   );
 };

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-export const Movies = () => {
+export const Trending = () => {
+
+  const navigate = useNavigate()
+
   const [movies, setmovies] = useState([])
 
   const getTrending = async () => {
@@ -21,6 +25,8 @@ export const Movies = () => {
         <div key={pelicula.id}>
           <p>Name: {pelicula.title}</p>
           <img
+          onClick={() => navigate('movies')}
+          style={{ cursor: 'pointer'}}
             src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
             alt={pelicula.name}
           />
