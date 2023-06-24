@@ -29,21 +29,23 @@ export const Trending = () => {
       <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {movies.map((pelicula) => (
         <div 
-        className="my-8 rounded-xl shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-200 hover:-translate-y-1"
+        className="my-3 rounded-2xl shadow-lg shadow-gray-200 dark:shadow-gray-900   duration-200 hover:-translate-y-1"
         key={pelicula.id}>
-          <figure>
+          <figure className="mx-5 my-5">
           <img
-          className="cursor-pointer rounded-t-lg"
+          className="cursor-pointer rounded-2xl"
           onClick={() => navigate('movies')}
             src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
             alt={pelicula.name}
           />
-          <figcaption>
-          <p className="text-center mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300">{pelicula.title}</p>
-          </figcaption>
           </figure>
+          <p className="text-center  mb-4 font-bold leading-relaxed">{pelicula.title}</p>
+          {/*
+          
+          */}
           
         </div>
+        
       ))}
       </div>
     </section>
